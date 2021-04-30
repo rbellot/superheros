@@ -6,11 +6,13 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 
 @Data
 @Entity
 @Table(name = "superhero")
+@AllArgsConstructor
 public class Superhero {
 
     @Id
@@ -20,10 +22,6 @@ public class Superhero {
     private String skill;
     private Integer weight;
 
-    public Superhero(String name, String skill, int weight) {
-        this.name = name;
-        this.skill = skill;
-        this.weight = weight;
-    }
+    public Superhero() {}
 
 }
